@@ -12,8 +12,8 @@ function App() {
         <Menu />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='' element={<About />} />
-          <Route path='' element={<ProductDetail />} />
+          <Route path='/About' element={<About />} />
+          <Route path='/ProductDetail' element={<ProductDetail />} />
         </Routes>
   </BrowserRouter>
     </div>

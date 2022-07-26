@@ -1,9 +1,10 @@
 import React from "react";
+import Aboutinfo from "../components/Aboutinfo";
 
 function About() {
   return (
     <div>
-      About
+      <Aboutinfo />
     </div>
   )
 }
