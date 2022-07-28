@@ -106,4 +106,6 @@ pasar a la rama nueva:
   virtual Document Object Model es un modelo en el navegador de los archivos de una pagina. La pagina existe en HTML con sus partes o nodos y en el navegador por medio de librerias-interfaz como react tiene un DOM manipulable para hacer cambios por medio de un lenguaje de programación com JavaScript.
 
 # 8 Dado el siguiente codePen, el cual solo tiene un HTML, por medio de css llegar a esta respuesta. Imagen. (Para mostrar los servicios debes usar CSS Flexbox o CSS Grid).
+  https://codepen.io/andrewsolutions81/pen/NWYaJVV?editors=1100
+
 
