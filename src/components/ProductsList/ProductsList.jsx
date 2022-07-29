@@ -1,9 +1,14 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect ,useState} from "react";
 
-
+const [products, setProducts] = useState([]);
 
 function ProductsList() {
+
+  useEffect(() => {
+    getProducts()
+      .then((data) => setProducts(data));
+    }, []);
 
   return(
   <div className="productlist">
