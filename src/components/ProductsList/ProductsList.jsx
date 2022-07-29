@@ -1,14 +1,12 @@
-import React from "react";
-import { useEffect ,useState} from "react";
-
-const [products, setProducts] = useState([]);
+import React ,{ useEffect ,useState} from "react";
+import {getProducts} from "../../services/FakeStoreApi"
 
 function ProductsList() {
 
-  useEffect(() => {
-    getProducts()
-      .then((data) => setProducts(data));
-    }, []);
+  const [products, setProducts] = React.useState([])
+  React.useEffect(() => {
+     getProducts(setProducts)
+  },[])
 
   return(
   <div className="productlist">

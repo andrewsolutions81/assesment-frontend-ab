@@ -2,7 +2,6 @@ import React from 'react';
 import ProductCard from '../components/ProductCard'
 import ProductList from '../components/ProductsList/ProductsList.jsx';
 
-
 function Home() {
   return (
       <div>
@@ -17,4 +16,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;
