@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* productlist start */
+.product-id{
+  display:none
+}
+.productlist{
+  display:flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+/* productlist end */

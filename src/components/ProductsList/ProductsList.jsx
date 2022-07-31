@@ -1,27 +1,32 @@
-import React ,{ useEffect ,useState} from "react";
+import { useEffect ,useState} from "react";
 import {getProducts} from "../../services/FakeStoreApi"
+import {useNavigate} from "react-router-dom"
 
 function ProductsList() {
 
-  const [products, setProducts] = React.useState([])
-  React.useEffect(() => {
-     getProducts(setProducts)
+  const [products, setProducts] = useState([])
+  useEffect(() => {
+    getProducts(setProducts)
   },[])
 
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    navigate(`../product-detail/${id}`);
+  }
+
+
   return(
-  <div className="productlist">
-    <div className="productlist-container">
-      <div className="productlist-item">
-        <div className="productlist-item__container">
-          <div className="productlist-item__info">product list</div>
-          <div className="productlist-item__id">id</div>
-          <h2 className="productlist-item__title">Title</h2>
-          <div className="productlist-item__image">image</div>
-          <h3 className="productlist-item__price">price</h3>
-        </div>
-      </div>
-    </div>
-  </div>
+    products.map((product) =>{
+      return(
+        <li className="productlist" key={product.id}>
+          <h2 className="productlist-title">{product.title}</h2>
+          <img className="product-image" src={product.image}></img>
+          <h3 className="productlist-price">{product.price}</h3>
+          <button  type="button" onClick={() => handleClick(product.id)} className="productlist-button">Details</button>
+        </li>
+      )
+    })
   )
 }
 

@@ -11,4 +11,3 @@ export const getProduct = (setState,id) => {
     .then(res=>res.json())
     .then(json=>setState(json))
 }
-

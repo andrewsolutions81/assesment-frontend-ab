@@ -1,5 +1,5 @@
 import React from "react";
-import Aboutinfo from "../components/Aboutinfo";
+import Aboutinfo from "../components/Aboutinfo/Aboutinfo";
 
 function About() {
   return (
