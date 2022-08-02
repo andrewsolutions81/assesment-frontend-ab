@@ -11,15 +11,15 @@ function Aboutinfo() {
       <ul className="about__list">
         <li className="about__list-item">
           <h2>GitHub</h2>
-          <p>aprendi GitHub</p>
+          <p>The most popular version control</p>
         </li>
         <li className="about__list-item">
           <h2>React</h2>
-          <p>aprendi react</p>
+          <p>learned about how to make a react app</p>
         </li>
         <li className="about__list-item">
           <h2>Hooks</h2>
-          <p>aprendi react Hooks</p>
+          <p>the most important part is how to use the hooks for handling events</p>
         </li>
       </ul>
       <div className="about__mail">andrewsolutions@gmail.com</div>

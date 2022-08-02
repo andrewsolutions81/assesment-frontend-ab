@@ -1,36 +1,35 @@
-import React from "react";
-import {getProducts} from '../../services/FakeStoreApi'
+import { useEffect ,useState} from "react";
+import {getProducts} from "../../services/FakeStoreApi"
+import {useNavigate} from "react-router-dom"
 
+function ProductCard(props) {
 
-function ProductCard() {
-  const [products, setProducts] = React.useState([])
-  React.useEffect(() => {
-     getProducts(setProducts)
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    setProducts([...props.products])
   },[])
-  return(
-    <div className="productcard">product card
-    <div className="productcard-image">image</div>
-    <h2 className="productcard-id">id</h2>
-    <h1 className="productcard-title">Title</h1>
-    <p className="productcard-description">Description</p>
 
-    </div>
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    navigate(`../product-detail/${id}`);
+  }
+
+
+  return(
+    products.map((product) =>{
+      return(
+        <li className="productlist" key={product.id}>
+          <h2 className="productlist-title">{product.title}</h2>
+          <img className="product-image" src={product.image}></img>
+          <p className="timer">00:00:00</p>
+          <button  type="button" onClick={() => handleClick(product.id)} className="productlist-area">Go to detail</button>
+        </li>
+      )
+    })
   )
 }
 
-export default ProductCard;
 
-/* import React from "react";
-
-
-function ProductCard() {
-  return(
-    <div className="productcard">
-      <div className="productcard__container">
-        product card
-      </div>
-    </div>
-  )
-}
-
-export default ProductCard; */
+export default ProductCard

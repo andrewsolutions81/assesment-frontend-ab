@@ -1,38 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import {getProduct}  from '../services/FakeStoreApi';
-import './pagesstyles.css';
+import React, {useEffect, useState} from "react";
+import { getProduct } from "../services/FakeStoreApi";
 
-function ProductDetail() {
-  const { id } = useParams();
+
+function ProductDetail(props) {
+
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    getProduct(id)
-      .then((data) => setProduct(data));
-  }, []);
+    setProduct([...props.products])
+  },[])
 
-  return (
-    <div className="product-detail__container">
-      {
-       product.id === Number(id)
-         ? (
-           <article className="product-detail" key={product.id}>
-             <div className="product-detail__image">
-               <img src={product.image} alt={product.title} />
-             </div>
-             <div className="product-detail__info">
-               <h1 className="product-detail__title">{product.title}</h1>
-               <span className="product-detail__price">$ {product.price} </span>
-               <span className="product-detail__category">{product.category}</span>
-               <p className="product-detail__description">{product.description}</p>
-             </div>
-           </article>
-         )
-         : null
-      }
+  return(
+    <div className="ProductDetail" key={product.id}> product detail
+      <h1 className="ProductDetail-title">{product.title}</h1>
+      <img className="ProductDetail-image">{product.image}</img>
+      <p className="ProductDetail-description">{product.description}</p>
+      <p className="ProductDetail-price">{product.price}</p>
+      <p className="ProductDeta-category">{product.category}</p>
     </div>
-  );
+  )
 }
 
 export default ProductDetail;

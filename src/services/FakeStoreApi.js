@@ -1,6 +1,4 @@
-const BASE_URL = 'http://fakestoreapi.com/';
-
-export const getProducts = (setState) => {
+export const getProducts = async (setState) => {
   fetch('https://fakestoreapi.com/products')
     .then(res=>res.json())
     .then(json=>setState(json))

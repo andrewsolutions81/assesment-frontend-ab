@@ -1,13 +1,21 @@
-import React from 'react';
-import ProductList from '../components/ProductsList/ProductsList.jsx';
+import React, {useEffect, useState} from 'react';
+import ProductCard from '../components/ProductCard/ProductCard';
 
-function Home() {
+function Home(props) {
+
+   const [products, setProducts ] = useState([])
+
+   useEffect(() => {
+    setProducts([...props.products])
+    },[props.products.length])
+
   return (
       <div>
         <div className='homepage'>
-          <h1 className='homepage_title'>Home Page</h1>
+          <h1 className='homepage__title'>Protucts</h1>
             <ul>
-              <ProductList />
+              { props.products.length > 0 && props.products ? <ProductCard products={props.products}/>
+              : <p>Loading...</p>}
             </ul>
         </div>
       </div>
