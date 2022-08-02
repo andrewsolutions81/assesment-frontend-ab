@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+## assesment-frontend-ab
+# 1  ¿Cuáles son las ceremonias más importantes de un Sprint y cuál es la idea de cada una?
+  las ceremonias de escrum son reuniones para organizar al equipo y el trabajo en diferentes etapas del proceso, existen 4.
+  - sprint planning: saber que tareas del backlog se van a realizar en el sprint
+  - daily standup/daily scrum: la reunion diaria donde cada integrante del equipo cuenta  en que está trabajando, que novedades han ocurrido, posibles bloqueos y cual será su próximo trabajo.
+  - sprint review: es la reunión para sosializar como se desempeño el equipo en el último sprint, se presentan los resultados del trabajo realizado en el sprint y en compañia de los stakeholder se re organiza el backlog para el siguiente sprint.
+  -sprint retrospective: Es la autoevaluación que hace el elquipo para saber que problemas se solucionaron y como, cuales no y por que. Se busca planear mejores formas de incrementar calidad y efectividad.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 2 ¿Qué son los Wireframes? Nombra al menos una herramienta que podamos utilizar.
+  los Wireframes son diseños del aspecto de una pagina web/aplicación, que tienen la ubicación de los componentes ya diseñados. Conocimos por medio de la página de Jira para usar en el proyecto grupal y clonar el aspecto y dimensiones. otras herramientas pueden ser Adobe xd, Sketch, InVIsion.
 
-## Available Scripts
+# 3 Explicar la diferencia entre var, let y const. Y dar un ejemplo en qué caso se utilizará.
+  En el lenguaje de programación javaScript, se guarda información con el uso de variables, var fue la primera para definir una variable, su scope es global y puede presentara problemas al sobre escribirse sin intención. let es una variable que puede mutar como  let count cuando count va a representar diferentes valores cada vez. mientras que const es una constante que no se puede sobre escribir.
 
-In the project directory, you can run:
+# 4 ¿Cuáles son los tres comandos que se pueden utilizar para crear una nueva rama llamada rama-1?
+-crea una nueva rama y se pasa a esa rama
+```git checkout -b rama-1```
+-crea una nueva rama
+```- git branch rama-1 ```
+pasar a la rama nueva:
+```git checkout rama-1```
+-si ya existe el repositorio en github  se puede crear la rama directamente
+  escoger la rama main/master para el menu desplegable y desde ahi encontrar o crear una rama
 
-### `npm start`
+# 5 Explicar la diferencia entre git merge y git rebase.
+  para el control de versiones de git los cambios se van guardando en commits, fotografias del estado de un proyecto. cuando se hace el comando git merge: los commits se agregan a la linea de tiempo de la rama del repositorio mientras que con el comando git rebase los commits locales van al final de la rama del repositorio.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 6 ¿Cuál es la diferencia entre Pull Request (PR) y el comando git pull?
+  el comando git pull manda los cambios/commits al repositorio y el pull request se hace para revisar si los cambios están funcionando y listos para ser integrados al repositorio. Esto lo aprueba un reviwer del equipo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 7 ¿Qué es el Virtual DOM?
+  virtual Document Object Model es un modelo en el navegador de los archivos de una pagina. La pagina existe en HTML con sus partes o nodos y en el navegador por medio de librerias-interfaz como react tiene un DOM manipulable para hacer cambios por medio de un lenguaje de programación com JavaScript.
 
-### `npm test`
+# 8 Dado el siguiente codePen, el cual solo tiene un HTML, por medio de css llegar a esta respuesta. Imagen. (Para mostrar los servicios debes usar CSS Flexbox o CSS Grid).
+  https://codepen.io/andrewsolutions81/pen/NWYaJVV?editors=1100
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

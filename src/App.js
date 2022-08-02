@@ -25,7 +25,8 @@ function App() {
       <BrowserRouter>
         <Menu />
         <Routes>
-          {isFetching && products.length > 0 && products? <Route path="/home" element={<p>is loading ...</p>} />
+          {isFetching && products.length > 0 && products
+          ? <Route path="/home" element={<p>is loading ...</p>} />
           : <Route path="/home" element={<Home products={products}/>} />}
           <Route path="/about" element={<About />} />
           <Route path="/product-detail" element={<ProductDetail />} />

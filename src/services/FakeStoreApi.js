@@ -9,3 +9,11 @@ export const getProduct = (setState,id) => {
     .then(res=>res.json())
     .then(json=>setState(json))
 }
+
+
+/* export async function getProduct(id) {
+  const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const json = await response.json();
+  return json;
+} */
+

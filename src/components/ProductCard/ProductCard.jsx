@@ -1,6 +1,7 @@
 import { useEffect ,useState} from "react";
 import {getProducts} from "../../services/FakeStoreApi"
 import {useNavigate} from "react-router-dom"
+import ProductDetail from "../../pages/ProductDetail";
 
 function ProductCard(props) {
 
