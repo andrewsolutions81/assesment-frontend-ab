@@ -25,7 +25,7 @@ function ProductCard(props) {
           <h2 className="productlist-title">{product.title}</h2>
           <img className="product-image" src={product.image}></img>
           <p className="timer">00:00:00</p>
-          <button  type="button" onClick={() => handleClick(product.id)} className="productlist-area">Go to detail</button>
+          <button  type="button" onClick={() => handleClick(product.id)} className="productlist-button">Go to detail</button>
         </li>
       )
     })
