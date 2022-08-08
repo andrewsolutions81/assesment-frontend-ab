@@ -3,28 +3,19 @@ import { getProduct } from "../services/FakeStoreApi";
 import { useParams } from "react-router-dom";
 
 
-function ProductDetail() {
+const  ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
-  const [state, setState] = useState([]);
-  const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
+  useEffect(() => {
     getProduct(setProduct, id);
-    console.log(state);
-  }, []);
-
-  const Loading =() => {
-    return(
-      <div>Loading.....</div>
-    )
-  }
+  }, [id]);
 
   return (
     <article className="ProductDetail-container">
         <div className="ProductDetail" key={product.id} />
         <h1 className="ProductDetail-title">{product.title}</h1>
-        <img className="ProductDetail-image" src={product.image}></img>
+        <img className="ProductDetail-image" src={product.image} alt="Cool product, white background"></img>
         <p className="ProductDetail-description">{product.description}</p>
         <p className="ProductDetail-price">{product.price}</p>
         <p className="ProductDetail-category">{product.category}</p>

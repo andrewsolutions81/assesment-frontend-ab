@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import "./Menustyles.css";
 
 
-function Menu() {
+const Menu = () => {
   return(
     <div className="menu">
       <div className="menu-container">

@@ -6,7 +6,6 @@ import About from "./pages/About";
 import ProductDetail from "./pages/ProductDetail";
 import { useEffect, useState } from "react";
 import { getProducts } from "./services/FakeStoreApi";
-import { useNavigate } from "react-router-dom";
 
 function App() {
   const [products, setProducts] = useState([]);

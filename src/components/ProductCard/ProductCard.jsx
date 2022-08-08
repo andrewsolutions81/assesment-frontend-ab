@@ -1,7 +1,7 @@
 import { useEffect ,useState} from "react";
-import {getProducts} from "../../services/FakeStoreApi"
 import {useNavigate} from "react-router-dom"
-import ProductDetail from "../../pages/ProductDetail";
+import Timer from "../Timer/Timer";
+
 
 function ProductCard(props) {
 
@@ -9,7 +9,7 @@ function ProductCard(props) {
 
   useEffect(() => {
     setProducts([...props.products])
-  },[])
+  },[props.products])
 
   const navigate = useNavigate();
 
@@ -23,8 +23,8 @@ function ProductCard(props) {
       return(
         <li className="productlist" key={product.id}>
           <h2 className="productlist-title">{product.title}</h2>
-          <img className="product-image" src={product.image}></img>
-          <p className="timer">00:00:00</p>
+          <img className="product-image" src={product.image} alt="Cool product, white background"></img>
+          <Timer/>
           <button  type="button" onClick={() => handleClick(product.id)} className="productlist-button">Go to detail</button>
         </li>
       )

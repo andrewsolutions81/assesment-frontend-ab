@@ -1,7 +1,7 @@
 import React from "react";
 import Aboutinfo from "../components/Aboutinfo/Aboutinfo";
 
-function About() {
+const About = () => {
   return (
     <div>
       <Aboutinfo />

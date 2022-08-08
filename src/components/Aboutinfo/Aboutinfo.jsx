@@ -1,7 +1,7 @@
 import React from "react";
 import imgandres from "../../images/imgandres.jpeg"
 
-function Aboutinfo() {
+const Aboutinfo = () => {
   return(
     <div className="about">
     <div className="about-container">
