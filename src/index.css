@@ -12,13 +12,11 @@ code {
     monospace;
 }
 
-/* productlist start */
-.product-id{
-  display:none
-}
+/* product card start  */
 .productlist{
   display:flex;
   flex-wrap: wrap;
   text-align: center;
 }
-/* productlist end */
+/* product card end */
+

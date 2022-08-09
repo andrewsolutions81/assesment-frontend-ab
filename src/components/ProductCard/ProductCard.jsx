@@ -17,6 +17,9 @@ function ProductCard(props) {
     navigate(`../product-detail/${id}`);
   }
 
+  if( Timer =='0:00'){
+
+  }
 
   return(
     products.map((product) =>{
