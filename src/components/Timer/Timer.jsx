@@ -18,7 +18,7 @@ const Timer = ({setIntro}) => {
       }
     },1000);
     return () => clearInterval (interval);
-  },[seconds, minutes])
+  },)
 
   const timeLeft = `${minutes}:${seconds}`
 

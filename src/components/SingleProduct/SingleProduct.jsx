@@ -9,11 +9,11 @@ function SingleProduct({product}) {
 
   const [intro, setIntro] = useState(true);
 	const [buttonStyle, setButtonStyle] = useState(
-		'productCard__detail__buttom button'
+		'product_button_available'
 	);
 	const [availabilityText, setAvailabilityText] = useState('Go to detail');
 
-	const hadleIntro = () => {
+	const handleIntro = () => {
 		if (intro) {
 			navigate(`../product-detail/${product.id}`, { replace: true });
 		}
@@ -22,7 +22,7 @@ function SingleProduct({product}) {
 	useEffect(() => {
 		const changeColorButton = () => {
 			if (intro === false) {
-				setButtonStyle('product_button_available');
+				setButtonStyle('product_button_unavailable');
 				setAvailabilityText('Product unabailable');
 			}
 		};
@@ -34,11 +34,11 @@ function SingleProduct({product}) {
       <h2 className="produc_title">{product.title}</h2>
       <img className="product_image" src={product.image} alt="Cool product, white background"></img>
       <div className={buttonStyle}>
-        <button onClick={hadleIntro}>{availabilityText}</button>
+        <button onClick={handleIntro}>{availabilityText}</button>
+      </div>
         {intro ?
         <Timer setIntro={setIntro} />
         : null}
-      </div>
     </li>
   )
 }
