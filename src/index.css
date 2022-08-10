@@ -14,9 +14,27 @@ code {
 
 /* product card start  */
 .productlist{
-  display:flex;
-  flex-wrap: wrap;
-  text-align: center;
+  border-radius: 10px;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:10px;
+    padding: 20px;
+    width:400px;
+}
+
+.product-image {
+  align-items:initial;
+  display: flex;
+  height: 250px;
+  justify-content: space-between;
+  width:250px;
+}
+
+.list-container{
+  grid-auto-flow:unset;
 }
 /* product card end */
 

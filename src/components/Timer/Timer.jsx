@@ -23,7 +23,7 @@ const Timer = ({setIntro}) => {
   const timeLeft = `${minutes}:${seconds}`
 
   return(
-      <div className="timmer">Timmer
+      <div className="timmer">
         <div className="timmer-numbers">Time left : {timeLeft}</div>
       </div>
   )
